@@ -1,0 +1,25 @@
+﻿using Gameplay.ShipSystems;
+using UnityEngine;
+using Gameplay.Weapons.Projectiles;
+
+namespace Gameplay.ShipControllers.CustomControllers
+{
+    public class PlayerShipController : ShipController
+    {
+
+        protected override void ProcessHandling(MovementSystem movementSystem)
+        {
+            movementSystem.LateralMovement(Input.GetAxis("Horizontal") * Time.deltaTime);
+
+            movementSystem.LateralMovement(Input.GetAxis("Vertical") * Time.deltaTime); 
+        }
+
+        protected override void ProcessFire(WeaponSystem fireSystem)
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                fireSystem.TriggerFire();
+            }
+        }
+    }
+}
