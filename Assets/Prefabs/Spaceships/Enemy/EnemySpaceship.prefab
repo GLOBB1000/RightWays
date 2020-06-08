@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 7280752513643992934}
   - component: {fileID: 5659333393718678246}
   - component: {fileID: 1387087252038566574}
+  - component: {fileID: 4085307493755610263}
   m_Layer: 0
   m_Name: EnemySpaceship
   m_TagString: Untagged
@@ -194,6 +195,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _representation: {fileID: 1507206475712916754}
+--- !u!114 &4085307493755610263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590599124999967857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a321f4de202c094090c37846bca4c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bonus: {fileID: 7799824180382307860, guid: 57232ef7c9054f94999e4bf1254eda9c, type: 3}
+  _parent: {fileID: 590599124999967858}
+  a: 1
+  b: 5
 --- !u!1 &1507206475712916752
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Gameplay.ShipControllers.CustomControllers;
 using Gameplay.Spaceships;
 
+//скрипт, который отвечает за вывод количества убитых вражеских кораблей в UI
 public class DamageForShip : MonoBehaviour
 {
     [SerializeField] Text Health;

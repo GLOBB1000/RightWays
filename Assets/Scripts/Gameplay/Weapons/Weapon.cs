@@ -13,14 +13,11 @@ namespace Gameplay.Weapons
         [SerializeField]
         private Transform _barrel;
 
-        [SerializeField]
-        private float _cooldown;
+        public float _cooldown;
 
 
         private bool _readyToFire = true;
         private UnitBattleIdentity _battleIdentity;
-        
-        
         
         public void Init(UnitBattleIdentity battleIdentity)
         {

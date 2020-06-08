@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     GameObject LifePref;
 
     [SerializeField]
-    Transform enemy;
+    List<Transform> enemy;
 
     private void Awake()
     {
@@ -42,7 +42,6 @@ public class GameController : MonoBehaviour
     }
     void Update()
     {
-
         counter.text = "Enemies killed       "  + count.ToString();
         //Проверяем, есть ли игрок в сцене, если его нет общее время ставится в 0
         if (player == null)
@@ -57,12 +56,6 @@ public class GameController : MonoBehaviour
     public void UpScoreAndinstantiateBonusPrefab()
     {
         count++;
-
-        var random = Random.Range(1, 5);
-        if (random == 3)
-        {
-            Instantiate(LifePref, enemy);
-        }
     }
 
     //Этот метод перезапускает игру.

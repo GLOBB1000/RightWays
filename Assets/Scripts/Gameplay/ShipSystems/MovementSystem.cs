@@ -5,8 +5,7 @@ namespace Gameplay.ShipSystems
     public class MovementSystem : MonoBehaviour
     {
 
-        [SerializeField]
-        private float _lateralMovementSpeed;
+        public float _lateralMovementSpeed;
         
         [SerializeField]
         private float _longitudinalMovementSpeed;

@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 1387087252038566574}
   - component: {fileID: -7944256556142058218}
   m_Layer: 0
-  m_Name: EnemySpaceshipMoving
+  m_Name: EnemySpaceshipMovingRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6671edb3d37b87b4a9dad05317ca7b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lateralMovementSpeed: 10
+  _lateralMovementSpeed: -10
   _longitudinalMovementSpeed: 0
   _crossMoving: 10
 --- !u!114 &590599124999967758

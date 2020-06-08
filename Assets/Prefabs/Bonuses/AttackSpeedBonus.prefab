@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7799824180382307861}
   - component: {fileID: 7799824180382307858}
-  - component: {fileID: 7799824180382307857}
   - component: {fileID: 7799824180382307856}
   - component: {fileID: 5486944675236238529}
-  - component: {fileID: 8686441876563227801}
-  - component: {fileID: 8934039225518552445}
+  - component: {fileID: -5054929014801383928}
+  - component: {fileID: 7173966090947551444}
+  - component: {fileID: 8390040053260107745}
   m_Layer: 0
-  m_Name: LifeBonus
+  m_Name: AttackSpeedBonus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7799824180382307860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d916748179c6a8345928c5f1dc3a4397, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0.1054201, g: 0.736159, b: 0.9716981, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -86,23 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7799824180382307857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7799824180382307860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f07363488ae7c94fbccf75fae054f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spaceship: {fileID: 0}
-  ship: {fileID: 0}
-  player:
-  - {fileID: 0}
-  movementSystem: {fileID: 5486944675236238529}
 --- !u!50 &7799824180382307856
 Rigidbody2D:
   serializedVersion: 4
@@ -137,9 +120,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lateralMovementSpeed: 0
-  _longitudinalMovementSpeed: 30
+  _longitudinalMovementSpeed: 40
   _crossMoving: 0
---- !u!58 &8686441876563227801
+--- !u!114 &-5054929014801383928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7799824180382307860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7bacdbe013bdfd469713e932daf41a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 3859684379371144949, guid: db160e65d2bc1c043828d51dfbc352da, type: 3}
+  movementSystem: {fileID: 5486944675236238529}
+--- !u!58 &7173966090947551444
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,8 +151,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.05
---- !u!114 &8934039225518552445
+  m_Radius: 0.08
+--- !u!114 &8390040053260107745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

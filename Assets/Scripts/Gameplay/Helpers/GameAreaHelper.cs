@@ -32,6 +32,22 @@ namespace Gameplay.Helpers
                 && (objectPos.y + objectBounds.extents.y > bottomBound);
 
         }
-        
+
+
+        //Метод ограничивающий x заданного вектора, для того чтобы позиция не выходила за  границы камеры, учитывая размеры объекта
+        public static Vector3 ClampPosition(Vector3 position, Bounds objectBounds)
+        {
+            var camHalfHeight = _camera.orthographicSize;
+            var camHalfWidth = camHalfHeight * _camera.aspect;
+            var camPos = _camera.transform.position;
+            var leftBound = camPos.x - camHalfWidth;
+            var rightBound = camPos.x + camHalfWidth;
+
+            var objectPos = position;
+
+            objectPos.x = Mathf.Clamp(objectPos.x, leftBound + objectBounds.extents.x, rightBound - objectBounds.extents.x);
+
+            return objectPos;
+        }
     }
 }

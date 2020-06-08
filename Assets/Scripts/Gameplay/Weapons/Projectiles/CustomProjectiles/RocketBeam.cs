@@ -7,6 +7,7 @@ using Gameplay.Spaceships;
 using Gameplay.Weapons.Projectiles;
 using Gameplay.Weapons;
 
+//Скрипт отвечающий за ракету
 public class RocketBeam : Projectile
 {
     protected override void Move(float speed)
